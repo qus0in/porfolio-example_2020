@@ -2,6 +2,8 @@
 
 /* 글꼴 & 웹폰트 설정 */
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 0.85rem;
 }
@@ -74,7 +76,7 @@ body > div {
     z-index: 3;
     /* 사이즈 */
     max-width: 480px;
-    width: 100%;
+    width: 90%;
     height: 3rem;
     line-height: 3rem;
     /* 꾸미기 */
