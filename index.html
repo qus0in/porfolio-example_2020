@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 구글 웹 폰트 : https://fonts.google.com/specimen/Noto+Sans+KR?subset=korean&sidebar.open&selection.family=Noto+Sans+KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- 타이틀 -->
     <title>김개발의 포트폴리오</title>
 </head>
 
 <body>
     <!-- 시맨틱 태그와 공간 나누기 -->
-    <header id="home">
+    <nav id="home">
         <!-- 목록 태그 -->
-        <ul>
+        <ul class="menu-bar">
             <!-- a 태그와 id 북마크 -->
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,93 +23,152 @@
             <li><a href="#project">Project</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </header>
+        <div id="type-writer">
+            김개발을 소개합니다!
+        </div>
+        </div>
+    </nav>
     <div id="about">
-        <!-- 제목 태그 h -->
-        <header>
-            <h1>About Me</h1>
-        </header>
-        <section>
-            <h2>김개발은 개발개발</h2>
-            <!-- p 태그와 br 태그, b 태그와 mark 태그 등 텍스트 관련 -->
-            <p>
-                <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.<br>
-                <mark>Nisi eveniet sequi, hic dolorum, ullam unde</mark>, minima blanditiis adipisci veritatis fugiat mollitia tempore voluptate?<br>
-                Assumenda optio id, cupiditate exercitationem doloremque corrupti.
-            </p>
-            <p>
-                Nesciunt animi facere quae quibusdam dolore at.<br>
-                Nesciunt perferendis nostrum similique illo tempore deserunt dignissimos saepe quia iusto, laboriosam natus obcaecati blanditiis.<br>
-                Consequatur incidunt dolorem rem veniam porro nisi illum enim esse ullam obcaecati blanditiis soluta veritatis voluptas neque, libero rerum! Ea quasi labore in debitis.<br>
-                Laudantium et cum aut dignissimos eum.
-            </p>
-        </section>
+        <div class="container">
+            <!-- 제목 태그 h -->
+            <header>
+                <h1>About Me</h1>
+            </header>
+            <section>
+                <div class="heading">
+                    <h2>김개발은 개발개발</h2>
+                </div>
+                <!-- p 태그와 br 태그, b 태그와 mark 태그 등 텍스트 관련 -->
+                <div class="detail">
+                    <p>
+                        <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        <mark>Nisi eveniet sequi, hic dolorum, ullam unde</mark>, minima blanditiis adipisci veritatis
+                        fugiat mollitia tempore voluptate?<br>
+                        Assumenda optio id, cupiditate exercitationem doloremque corrupti.
+                    </p>
+                    <p>
+                        Nesciunt animi facere quae quibusdam dolore at.<br>
+                        Nesciunt perferendis nostrum similique illo tempore deserunt dignissimos saepe quia iusto,
+                        laboriosam natus obcaecati blanditiis.<br>
+                        Consequatur incidunt dolorem rem veniam porro nisi illum enim esse ullam obcaecati blanditiis
+                        soluta veritatis voluptas neque, libero rerum! Ea quasi labore in debitis.<br>
+                        Laudantium et cum aut dignissimos eum.
+                    </p>
+                </div>
+            </section>
+        </div>
     </div>
     <div id="skills">
-        <h1>Skills</h1>
-        <!-- https://www.flaticon.com/ -->
-        <!-- img 태그 -->
-        <div>
+        <div class="container">
             <header>
-                <h2>Language</h2>
+                <h1>Skills</h1>
             </header>
-            <section>
-                <img src="https://image.flaticon.com/icons/svg/919/919852.svg" alt="파이썬" width="128px" height="128px" title="파이썬">
-                <img src="https://image.flaticon.com/icons/svg/919/919854.svg" alt="자바" width="128px" height="128px" title="자바"">
-                <img src="https://image.flaticon.com/icons/svg/919/919828.svg" alt="자바스크립트" width="128px" height="128px" title="자바스크립트">
-            </section>
+            <!-- https://www.flaticon.com/ -->
+            <!-- img 태그 -->
+            <div class="category">
+                <header>
+                    <h2>Language</h2>
+                </header>
+                <section>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919852.svg" alt="파이썬" width="128px"
+                            height="128px">
+                        <div>Basic</div>
+                    </figure>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919854.svg" alt="자바" width="128px"
+                            height="128px">
+                        <div>Intermediate</div>
+                    </figure>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919828.svg" alt="자바스크립트" width="128px"
+                            height="128px">
+                        <div>Expert</div>
+                    </figure>
+                </section>
+            </div>
+            <div class="category">
+                <header>
+                    <h2>Web</h2>
+                </header>
+                <section>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919827.svg" alt="HTML5" width="128px"
+                            height="128px">
+                        <div>Basic</div>
+                    </figure>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919826.svg" alt="CSS3" width="128px"
+                            height="128px">
+                        <div>Intermediate</div>
+                    </figure>
+                    <figure class="logos">
+                        <img src="https://image.flaticon.com/icons/svg/919/919828.svg" alt="자바스크립트" width="128px"
+                            height="128px">
+                        <div>Expert</div>
+                    </figure>
+                </section>
+            </div>
         </div>
-        <div>
-            <header>
-                <h2>Web</h2>
-            </header>
-            <section>
-                <img src="https://image.flaticon.com/icons/svg/919/919827.svg" alt="HTML5" width="128px" height="128px" title="HTML5">
-                <img src="https://image.flaticon.com/icons/svg/919/919826.svg" alt="CSS3" width="128px" height="128px" title="CSS3">
-                <img src="https://image.flaticon.com/icons/svg/919/919828.svg" alt="자바스크립트" width="128px" height="128px" title="자바스크립트">
-            </section>
-        </div>
-
     </div>
     <div id="project">
-        <h1>Project</h1>
-        <section>
+        <div class="container">
             <header>
-                <h2>Project #1 : Bigdata, AI, Machine Learning</h2>
-                <small>Date : 20xx.xx.xx</small>
+                <h1>Project</h1>
             </header>
-            <article>
-                <figure>
-                    <img src="https://cdn.pixabay.com/photo/2016/06/03/13/57/digital-marketing-1433427_1280.jpg" alt="example" width="360px" height="240px">
-                </figure>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maxime accusantium dicta voluptas! At fugit aut quae alias? Dolores animi consequatur voluptas accusantium sapiente voluptate sit enim alias aliquid error.
-                </p>
-            </article>
-        </section>
-        <section>
-            <header>
-                <h2>Project #2 : Algorithm, Data Structure</h2>
-                <small>Date : 20xx.xx.xx</small>
-            </header>
-            <article>
-                <figure>
-                    <img src="https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198__480.jpg" alt="example" width="360px" height="240px">
-                </figure>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maxime accusantium dicta voluptas! At fugit aut quae alias? Dolores animi consequatur voluptas accusantium sapiente voluptate sit enim alias aliquid error.
-                </p>
-            </article>
-        </section>
+            <section class="card">
+                <header>
+                    <h2>Project #1 : Bigdata, AI, Machine Learning</h2>
+                    <div class="date">
+                        <small>Start : 20xx.xx.xx</small>
+                        <small>End : 20xx.xx.xx</small>
+                    </div>
+                </header>
+                <article>
+                    <img src="https://cdn.pixabay.com/photo/2016/06/03/13/57/digital-marketing-1433427_1280.jpg"
+                        alt="example" width="240px" height="180px">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maxime accusantium dicta
+                        voluptas!
+                        At fugit aut quae alias? Dolores animi consequatur voluptas accusantium sapiente voluptate sit
+                        enim
+                        alias aliquid error.
+                    </p>
+                </article>
+            </section>
+            <section class="card">
+                <header>
+                    <h2>Project #2 : Algorithm, Data Structure</h2>
+                    <div class="date">
+                        <small>Start : 20xx.xx.xx</small>
+                        <small>End : 20xx.xx.xx</small>
+                    </div>
+                </header>
+                <article>
+                    <img src="https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198__480.jpg" alt="example">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maxime accusantium dicta
+                        voluptas!
+                        At fugit aut quae alias? Dolores animi consequatur voluptas accusantium sapiente voluptate sit
+                        enim
+                        alias aliquid error.
+                    </p>
+                </article>
+            </section>
+        </div>
     </div>
     <div id="contact">
-        <h1>Contact</h1>
-        <!-- a 태그로 링크 만들기 -->
-        <a href="https://github.com" target="_blank">
-            <img src="https://image.flaticon.com/icons/svg/919/919847.svg" alt="GitHub" title="GitHub" width="120px" height="120px">
-        </a>
-        <div>
-            <b>email : kimdev@email.com</b>
+        <div class="container">
+            <header>
+                <h1>Contact</h1>
+            </header>
+            <!-- a 태그로 링크 만들기 -->
+            <div class="git-logo">
+                <a href="https://github.com" target="_blank">
+                    <img src="https://image.flaticon.com/icons/svg/919/919847.svg" alt="GitHub">
+                </a>
+                <b>email :<br>kimdev@email.com</b>
+            </div>
         </div>
     </div>
 </body>
