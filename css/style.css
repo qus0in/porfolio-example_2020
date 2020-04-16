@@ -88,6 +88,23 @@ body > div {
     margin: 8rem auto 4rem;
     text-align: center;
 }
+#type-writer-txt::after {
+    content: "|";
+    position: absolute;
+    font-size: 1.8rem;
+    color: orange;
+    font-weight: bold;
+    animation: cursor 0.5s step-end infinite;
+}
+@keyframes cursor{
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+  }
+/* 타이핑 완료 후 속도 늦추기 */
+#type-writer-txt.finished::after {
+    animation: cursor 1s step-end infinite;
+}
 
 /* 링크 서식 바꾸기 */
 #home a {
@@ -200,7 +217,7 @@ header > h1 {
 }
 .card {
     clear: both;
-    margin: 3rem 0px;
+    margin: 2rem 0px;
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(128, 128, 128, 0.3);
     border-radius: 1rem;
@@ -218,7 +235,7 @@ header > h1 {
     /* 포지션 & 디스플레이 */
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 1rem auto;
     padding: 1rem;
     width: 40%;
     /* 꾸미기 */
@@ -233,4 +250,13 @@ header > h1 {
 }
 .git-logo img {
     width: 80px;
+}
+
+/* 페이지 푸터 */
+.page-footer {
+    padding: 2rem;
+    margin: auto;
+    background-color: grey;
+    color: white;
+    text-align: center;
 }

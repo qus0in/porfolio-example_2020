@@ -17,15 +17,19 @@
         <!-- 목록 태그 -->
         <ul class="menu-bar">
             <!-- a 태그와 id 북마크 -->
-            <li><a href="#home">Home</a></li>
+            <!-- <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+            <!-- 자바스크트립트를 통한 스크롤 -->
+            <li><a href="javascript:void(0)" onclick="navScroll('#home')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="navScroll('#about')">About</a></li>
+            <li><a href="javascript:void(0)" onclick="navScroll('#skills')">Skills</a></li>
+            <li><a href="javascript:void(0)" onclick="navScroll('#project')">Project</a></li>
+            <li><a href="javascript:void(0)" onclick="navScroll('#contact')">Contact</a></li>
         </ul>
-        <div id="type-writer">
-            김개발을 소개합니다!
-        </div>
+        <div id="type-writer"><span id="type-writer-txt">&nbsp;</span></div>
         </div>
     </nav>
     <div id="about">
@@ -171,6 +175,10 @@
             </div>
         </div>
     </div>
+    <footer class="page-footer">
+        ⓒ kimdev
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
