@@ -53,7 +53,7 @@ body > div {
 /* 레이아웃 크기 잡기 */
 .container {
     max-width: 480px;
-    min-width: 320px;
+    min-width: 240px;
     margin: auto;
     padding: 1rem 1rem;
     position: relative;
@@ -98,11 +98,17 @@ body > div {
     font-weight: bold;
     animation: cursor 0.5s step-end infinite;
 }
-@keyframes cursor{
-    0%{opacity:0;}
-    50%{opacity:1;}
-    100%{opacity:0;}
-  }
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 /* 타이핑 완료 후 속도 늦추기 */
 #type-writer-txt.finished::after {
     animation: cursor 1s step-end infinite;
@@ -177,19 +183,22 @@ header > h1 {
 .logos {
     /* 포지션 설정 */
     position: relative;
-    margin: 0 1rem;
+    margin: 0 1vh;
     padding: 0;
+    box-sizing: border-box;
 }
 .logos > img {
+    width: 100%;
+    height: 100%;
     /* z-index 조정 */
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 .logos > div {
     /* 사이즈 */
-    width: 128px;
-    height: 128px;
-    line-height: 128px;
+    width: 100%;
+    height: 100%;
     /* 포지션 & z-index */
     position: absolute;
     top: 0;
@@ -197,9 +206,13 @@ header > h1 {
     text-align: center;
     color: white;
     background-color: black;
-    border: 1px solid white;
+    border: 3px solid white;
     box-sizing: border-box;
     border-radius: 50%;
+    /* 내부 요소 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* 가장 클래스 선택자 (이벤트, 언마우스, 호버)ㄴ */
 #skills img:hover {

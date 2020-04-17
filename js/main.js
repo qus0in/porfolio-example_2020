@@ -7,9 +7,13 @@ const speed = 500; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
   const writer = document.getElementById("type-writer-txt")
   if (i < txt.length) {
-    writer.innerHTML += txt.charAt(i);
-    i++;
+    if (!writer.innerHTML) {
+      writer.innerHTML = txt.charAt(i)
+    } else {
+      writer.innerHTML += txt.charAt(i);
+    }
     setTimeout(typeWriter, speed);
+    i++;
   } else {
     writer.classList.add('finished')
   }
