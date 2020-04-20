@@ -1,0 +1,174 @@
+/* 태그 연산자 */
+/* 전체 폰트 종류 & 크기 설정 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.85rem;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67em;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+b {
+    font-weight: bold;
+}
+small {
+    font-size: smaller;
+}
+body > footer {
+    height: 60px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+/* 내비게이션 & 웰컴 메시지 */
+#home {
+    background: rgba(0, 0, 0, 0.7)
+        url(https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg)
+        center / cover no-repeat fixed;
+    background-blend-mode: multiply;
+    color: white;
+}
+#home a {
+    color: white;
+    text-decoration: none;
+}
+#home a:visited {
+    color: white;
+    text-decoration: none;
+}
+/* 리스트 메뉴 */
+#home ul {
+    background-color: rgba(128, 128, 128, 0.7);
+    border-radius: 1rem;
+    text-align: center;
+    height: 40px;
+}
+/* 웰컴 메시지 */
+#home header {
+    padding: 2rem 1rem;
+    font-size: 2.5em;
+    text-align: center;
+}
+/* 자기소개 */
+#about {
+    background-color: rgba(244, 224, 77, 0.5);
+}
+/* 제목 부분 */
+#about h2 {
+    /* 크기 고정해서 옆 부분만 움직이게 */
+    min-width: 6rem;
+    max-width: 6rem;
+    text-align: center;
+}
+#about section {
+    margin: 1rem 0 0;
+}
+#skills {
+    background-color: rgba(242, 237, 111, 0.5);
+}
+#skills figure {
+    max-width: 160px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+#skills img {
+    /* flex 크기가 자동 조정되므로 width 100% */
+    width: 100%;
+}
+/* 400px 미만의 화면일 경우 세로로 배치 */
+@media screen and (max-width: 400px) {
+    #skills .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* 프로젝트 */
+#project {
+    background-color: rgba(206, 227, 151, 0.5);
+    line-height: 1.5;
+}
+#project figure {
+    width: 100%;
+    min-width: 240px;
+    max-width: 240px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+#project p {
+    padding: 0.5rem;
+}
+#project img {
+    border-radius: 1rem;
+    width: 100%;
+}
+/* 465px 미만의 화면일 경우 세로로 배치 */
+@media screen and (max-width: 465px) {
+    #project .flex {
+        flex-direction: column;
+    }
+}
+/* 연락처 */
+#contact {
+    background-color: rgba(141, 177, 171, 0.5);
+}
+#contact img {
+    width: 160px;
+    margin: 1rem;
+}
+#contact p {
+    text-align: center;
+}
+/* 모바일에도 대응할 수 있도록 크기 설정 */
+.container {
+    /* 최대 설정 (480px) */
+    max-width: 480px;
+    /* 가운데 정렬 */
+    margin: auto;
+    /* 요소 내부 여백 */
+    padding: 1rem;
+}
+/* 컨텐츠를 담는 카드 모양의 요소 */
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1rem;
+    padding: 1rem;
+    /* 외곽선 설정 */
+    border: 1px solid grey;
+    /* 원형으로 깎기 */
+    border-radius: 1rem;
+}
+
+/* flex를 통한 정렬 */
+.flex {
+    display: flex;
+}
+/* 세로 한 줄씩 정렬이 필요한 경우 */
+.fl-column {
+    flex-direction: column;
+}
+/* 수평 가운데 정렬 */
+.fl-center {
+    justify-content: center;
+}
+/* 수직 가운데 정렬 (column의 경우 수평 가운데 정렬) */
+.fl-middle {
+    align-items: center;
+}
+/* 균등 분배 */
+.fl-around {
+    justify-content: space-around;
+}
+/* column 기준 우측 정렬 */
+.fl-col-right {
+    align-items: flex-end;
+}
