@@ -79,9 +79,8 @@ body > footer {
     background-color: rgba(242, 237, 111, 0.5);
 }
 #skills figure {
-    max-width: 160px;
-    box-sizing: border-box;
-    padding: 5px;
+    max-width: 150px;
+    margin: 5px;
 }
 #skills img {
     /* flex 크기가 자동 조정되므로 width 100% */
@@ -178,4 +177,97 @@ body > footer {
 /* column 기준 우측 정렬 */
 .fl-col-right {
     align-items: flex-end;
+}
+
+/* position */
+/* 내비게이션 */
+#home header {
+    margin-top: 40px;
+}
+#home ul {
+    position: fixed;
+    width: 90%;
+    max-width: 480px;
+    z-index: 99;
+}
+/* 이미지 호버 */
+#skills figure {
+    position: relative;
+}
+#skills img {
+    position: relative;
+    z-index: 9;
+}
+#skills figcaption {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+/* 호버 (마우스 올리기) 효과 */
+#skills img:hover {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#home li:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 가상 요소 선택자를 통한 막대 만들기 */
+/* 웰컴 메시지 뒤 타이핑 표시 */
+#home header p::after {
+    content: "|";
+    /* 위치 조정 */
+    position: absolute;
+    /* 폰트 설정 */
+    font-size: 1.8rem;
+    color: orange;
+    font-weight: bold;
+}
+/* 자기소개 제목 아래 밑줄 */
+#about div section {
+    position: relative;
+}
+#about h2::after {
+    content: "";
+    /* 위치 조정 */
+    position: absolute;
+    transform: translate(-140%, 1.6rem);
+    /* 선 설정 */
+    width: 2.5rem;
+    height: 2px;
+    background-color: grey;
+}
+/* 타이핑 커서 효과 */
+#home header p::after {
+    animation: cursor 1s step-end infinite;
+}
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* nav와 welcome message 제외하고 fade-in */
+body > section {
+    animation: fadein 3s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
