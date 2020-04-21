@@ -9,7 +9,7 @@
 
 ![연락처, 저작권](img/img04.png)
 ## **구성 요소**
-### <flex 박스 개념>>
+### <flex 박스 개념>
 - flex 박스의 개본 개념 [(참고)](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%EC%9D%98_%EA%B8%B0%EB%B3%B8_%EA%B0%9C%EB%85%90)
 ### <미디어 쿼리>
 - @media [(참고)](https://poiemaweb.com/css3-responsive-web-design#12-media)

@@ -79,9 +79,8 @@ body > footer {
     background-color: rgba(242, 237, 111, 0.5);
 }
 #skills figure {
-    max-width: 160px;
-    box-sizing: border-box;
-    padding: 5px;
+    max-width: 150px;
+    margin: 5px;
 }
 #skills img {
     /* flex 크기가 자동 조정되므로 width 100% */
@@ -178,4 +177,54 @@ body > footer {
 /* column 기준 우측 정렬 */
 .fl-col-right {
     align-items: flex-end;
+}
+
+/* position */
+/* 내비게이션 */
+#home header {
+    /* 내비게이션 바의 크기만큼 띄우기 */
+    margin-top: 40px;
+}
+#home ul {
+    /* 화면 특정 위치에 고정 */
+    position: fixed;
+    /* fixed가 되면 크기 속성을 자동으로 상속받지 못하므로 별도 지정해줘야함 */
+    width: 90%;
+    max-width: 480px;
+    /* 가장 위에 있을 수 있게 z-index */
+    z-index: 99;
+}
+/* 이미지 호버 */
+#skills figure {
+    /* 자식 요소의 absolute 기준점이 되기 위해 relative 설정 */
+    position: relative;
+}
+#skills img {
+    /* static이 아니어야 z-index 작동 */
+    position: relative;
+    z-index: 9;
+}
+#skills figcaption {
+    /* img와 위치를 겹치게 하기 위해 absolute 설정 */
+    position: absolute;
+    /* 크기 설정 */
+    width: 95%;
+    height: 95%;
+    /* 위치 조정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 디자인 조정 */
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+/* 호버 (마우스 올리기) 효과 */
+#skills img:hover {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#home li:hover {
+    font-weight: bold;
+    text-decoration: underline;
 }
