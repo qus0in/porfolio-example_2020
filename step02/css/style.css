@@ -1,0 +1,236 @@
+/* 셀렉터 기본 개념 배우기 (id, class) */
+
+/* 글꼴 & 웹폰트 설정 */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.85rem;
+}
+/* 페이드 인 기능 */
+body > div {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 레이아웃 크기 잡기 */
+.container {
+    max-width: 480px;
+    min-width: 320px;
+    margin: auto;
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+/* 네비게이션 */
+.menu-bar {
+    margin-top: 2rem;
+    padding: 0px;
+    /* 리스트 관련 css 속성 */
+    list-style-type: none;
+    /* 내부 요소 정렬 속성 */
+    display: flex;
+    justify-content: space-around;
+    /* 상위 고정 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    /* 사이즈 */
+    max-width: 480px;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    /* 꾸미기 */
+    background-color: rgba(128, 128, 128, 0.7);
+    border-radius: 1rem;
+}
+/* 타이핑 효과 */
+#type-writer {
+    color: white;
+    font-size: 2rem;
+    margin: 8rem auto 4rem;
+    text-align: center;
+}
+
+/* 링크 서식 바꾸기 */
+#home a {
+    text-decoration: none;
+    color: white;
+}
+#home a:hover {
+    font-weight: bold;
+}
+
+/* 헤더 밑줄 */
+header > h1 {
+    text-decoration: underline;
+}
+
+/* 배경 */
+/* https://colorhunt.co/ */
+#home {
+    /* 배경 이미지 + 색상 섞기 */
+    background: rgba(0, 0, 0, 0.7)
+        url(https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg)
+        center / cover no-repeat fixed;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#about {
+    background-color: rgba(244, 224, 77, 0.5);
+}
+#skills {
+    background-color: rgba(242, 237, 111, 0.5);
+}
+#project {
+    background-color: rgba(206, 227, 151, 0.5);
+}
+#contact {
+    background-color: rgba(141, 177, 171, 0.5);
+}
+
+/* 자기 소개 레이아웃 */
+#about > .container > * {
+    display: inline-flex;
+}
+.heading,
+.detail {
+    min-width: 6rem;
+    padding: 0 1.5rem;
+}
+/* 가상 요소 선택자 */
+.heading::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    background-color: grey;
+    left: 54px;
+}
+
+/* 프로그래밍 기술 */
+.category {
+    margin-bottom: 2rem;
+}
+.category > * {
+    display: flex;
+    justify-content: center;
+}
+.logos {
+    /* 포지션 설정 */
+    position: relative;
+    margin: 0 1rem;
+    padding: 0;
+}
+.logos > img {
+    /* z-index 조정 */
+    position: relative;
+    z-index: 1;
+}
+.logos > div {
+    /* 사이즈 */
+    width: 128px;
+    height: 128px;
+    line-height: 128px;
+    /* 포지션 & z-index */
+    position: absolute;
+    top: 0;
+    /* 정렬 & 서식 */
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+/* 가장 클래스 선택자 (이벤트, 언마우스, 호버)ㄴ */
+#skills img:hover {
+    /* 트랜지션 & Opacity */
+    transition: 1.5s;
+    opacity: 0;
+}
+
+/* 프로젝트 */
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.date > small {
+    text-align: right;
+}
+.card {
+    clear: both;
+    margin: 3rem 0px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+#project img {
+    width: 240px;
+    height: 160px;
+    float: left;
+    padding: 1rem;
+}
+
+/* 문의 */
+.git-logo {
+    /* 포지션 & 디스플레이 */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    width: 40%;
+    /* 꾸미기 */
+    border: 1px solid grey;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.git-logo * {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.git-logo img {
+    width: 80px;
+}
